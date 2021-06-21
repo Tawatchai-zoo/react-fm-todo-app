@@ -55,6 +55,7 @@ const TodoList = () => {
 
     const handleOnDragEnd = (result) => {
         if (!result.destination) return;
+        // if (sortOn !== "all") return;
         const todosAfterDrop = [...todos];
         const [itemDraged] = todosAfterDrop.splice(result.source.index, 1);
         todosAfterDrop.splice(result.destination.index, 0, itemDraged);
